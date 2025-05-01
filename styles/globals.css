@@ -1,0 +1,59 @@
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+html, body, #__next {
+    @apply bg-[#0d0d0d] text-white;
+}
+
+
+@layer utilities {
+    .mask-vertical-soft {
+        mask-image: url('/mask-vertical.svg');
+        mask-repeat: no-repeat;
+        mask-size: 100% 100%;
+        -webkit-mask-image: url('/mask-vertical.svg');
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: 100% 100%;
+    }
+}
+
+@layer utilities {
+    @keyframes float {
+        0%   { transform: translateY(0px) scale(1); }
+        50%  { transform: translateY(-20px) scale(1.05); }
+        100% { transform: translateY(0px) scale(1); }
+    }
+
+    @keyframes drift {
+        0%   { transform: translate(0, 0); }
+        50%  { transform: translate(20px, -10px); }
+        100% { transform: translate(0, 0); }
+    }
+
+    .animate-float {
+        animation: float 8s ease-in-out infinite;
+    }
+
+    .animate-drift {
+        animation: drift 12s ease-in-out infinite;
+    }
+}
+
+@layer utilities {
+    @keyframes pulse-glow {
+        0%, 100% { opacity: 0.1; }
+        50% { opacity: 0.25; }
+    }
+
+    .animate-pulse-glow {
+        animation: pulse-glow 6s ease-in-out infinite;
+    }
+}
+
