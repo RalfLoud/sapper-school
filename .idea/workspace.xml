@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68666108-b731-43d2-a3b8-7af1dffcb88a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-    </list>
+    <list default="true" id="68666108-b731-43d2-a3b8-7af1dffcb88a" name="Changes" comment="fix pj" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,8 +79,17 @@
       <updated>1746024848438</updated>
       <workItem from="1746024849535" duration="4731000" />
       <workItem from="1746075729061" duration="18994000" />
-      <workItem from="1746100023146" duration="2634000" />
+      <workItem from="1746100023146" duration="3035000" />
     </task>
+    <task id="LOCAL-00001" summary="fix pj">
+      <option name="closed" value="true" />
+      <created>1746102698506</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1746102698506</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,5 +105,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fix pj" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix pj" />
   </component>
 </project>
