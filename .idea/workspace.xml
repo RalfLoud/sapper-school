@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68666108-b731-43d2-a3b8-7af1dffcb88a" name="Changes" comment="fix pj">
+    <list default="true" id="68666108-b731-43d2-a3b8-7af1dffcb88a" name="Changes" comment="favicon add">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ContactForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ContactForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/News.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/News.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SectionWrapper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SectionWrapper.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +86,8 @@
       <updated>1746024848438</updated>
       <workItem from="1746024849535" duration="4731000" />
       <workItem from="1746075729061" duration="18994000" />
-      <workItem from="1746100023146" duration="8337000" />
+      <workItem from="1746100023146" duration="10631000" />
+      <workItem from="1746160536407" duration="1860000" />
     </task>
     <task id="LOCAL-00001" summary="fix pj">
       <option name="closed" value="true" />
@@ -100,7 +105,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746103315011</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="favicon add">
+      <option name="closed" value="true" />
+      <created>1746114429424</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1746114429424</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +132,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix pj" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix pj" />
+    <MESSAGE value="favicon add" />
+    <option name="LAST_COMMIT_MESSAGE" value="favicon add" />
   </component>
 </project>

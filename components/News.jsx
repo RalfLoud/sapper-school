@@ -10,9 +10,9 @@ const News = () => {
   return (
     <SectionWrapper id="news">
       <h2 className="text-3xl font-bold mb-8">Новости</h2>
-      <div className="grid gap-6 md:grid-cols-3 w-full">
+      <div className="grid gap-6 md:grid-cols-3 w-full ">
         {items.map((item, i) => (
-          <div key={i} className="border border-gray-700 bg-[#0d0d0d]">
+          <div key={i} className="border border-gray-700 bg-[#0d0d0d] hover:scale-[1.03] hover:shadow-xl transition-all">
             <div className="aspect-video overflow-hidden">
               <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
             </div>

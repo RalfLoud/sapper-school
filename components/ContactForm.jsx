@@ -8,19 +8,19 @@ const Contact = () => {
         <input
           type="text"
           placeholder="Имя"
-          className="w-full bg-gray-900 border border-gray-700 text-white p-3 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-green-600"
+          className="w-full bg-green-800 border border-gray-700 text-white p-3 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-green-600"
         />
         
         <input
           type="email"
           placeholder="Email"
-          className="w-full bg-gray-900 border border-gray-700 text-white p-3 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-green-600"
+          className="w-full bg-green-800 border border-gray-700 text-white p-3 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-green-600"
         />
         
         <textarea
           placeholder="Сообщение"
           rows="4"
-          className="w-full bg-gray-900 border border-gray-700 text-white p-3 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-green-600"
+          className="w-full bg-green-800 border border-gray-700 text-white p-3 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-green-600"
         ></textarea>
         <button className="bg-green-600 text-white px-6 py-2 hover:bg-green-700 transition">Отправить</button>
       </form>

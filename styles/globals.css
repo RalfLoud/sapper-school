@@ -8,21 +8,21 @@
 html {
     scroll-behavior: smooth;
 }
-html, body, #__next {
-    @apply bg-[#0d0d0d] text-white;
-}
+/*html, body, #__next {*/
+/*    @apply bg-[#0d0d0d] text-white;*/
+/*}*/
 
 
-@layer utilities {
-    .mask-vertical-soft {
-        mask-image: url('/mask-vertical.svg');
-        mask-repeat: no-repeat;
-        mask-size: 100% 100%;
-        -webkit-mask-image: url('/mask-vertical.svg');
-        -webkit-mask-repeat: no-repeat;
-        -webkit-mask-size: 100% 100%;
-    }
-}
+/*@layer utilities {*/
+/*    .mask-vertical-soft {*/
+/*        mask-image: url('/mask-vertical.svg');*/
+/*        mask-repeat: no-repeat;*/
+/*        mask-size: 100% 100%;*/
+/*        -webkit-mask-image: url('/mask-vertical.svg');*/
+/*        -webkit-mask-repeat: no-repeat;*/
+/*        -webkit-mask-size: 100% 100%;*/
+/*    }*/
+/*}*/
 
 @layer utilities {
     @keyframes float {
@@ -56,4 +56,27 @@ html, body, #__next {
         animation: pulse-glow 6s ease-in-out infinite;
     }
 }
-
+@layer base {
+    html, body {
+        background-image: repeating-linear-gradient(
+                45deg,
+                rgba(255,255,255,0.01) 0px,
+                rgba(255,255,255,0.01) 1px,
+                transparent 1px,
+                transparent 5px
+        );
+        background-color: #0d0d0d;
+    }
+}
+@media (max-width: 768px) {
+    html, body {
+        background-image: repeating-linear-gradient(
+                45deg,
+                rgba(255,255,255,0.01) 0px,
+                rgba(255,255,255,0.01) 1px,
+                transparent 1px,
+                transparent 5px
+        );
+        background-color: #0d0d0d;
+    }
+}
