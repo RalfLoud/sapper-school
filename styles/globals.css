@@ -82,52 +82,37 @@ html {
 }
 
 .wave-button {
-    position: relative;
-    display: inline-block;
-    padding: 24px 56px;
-    background-color: #89f901;
-    color: #000;
-    font-weight: 600;
-    text-transform: uppercase;
-    border-radius: 0.5rem;
-    box-shadow: 0 0 10px #00000030;
-    overflow: hidden;
-    transition: transform 0.3s ease;
+    @apply relative overflow-hidden px-6 py-3 min-h-[48px] min-w-[200px] font-semibold uppercase tracking-wider rounded shadow-lg transition-transform duration-300 bg-[#89f901] text-black inline-flex items-center justify-center gap-2;
 }
 
 .wave-button:hover {
-    transform: scale(1.05);
-}
-
-.wave-button span {
-    position: relative;
-    z-index: 2;
+    @apply scale-105;
 }
 
 .wave-button::before {
     content: "";
     position: absolute;
-    top: -50%;
-    left: -50%;
+    top: 0;
+    left: -100%;
     width: 200%;
-    height: 200%;
-    background: linear-gradient(135deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255, 45) 100%);
-    animation: waveAnimation 3s ease-in-out infinite;
-    z-index: 1;
-    pointer-events: none;
+    height: 100%;
+    background: linear-gradient(
+            120deg,
+            rgba(255, 255, 255, 0.3) 0%,
+            rgba(255, 255, 255, 0.05) 100%
+    );
+    transform: skewX(-20deg);
+    animation: sweep 3s infinite;
 }
 
-@keyframes waveAnimation {
+@keyframes sweep {
     0% {
-        transform: translateX(-100%) skewX(-20deg);
-        opacity: 0.2;
+        left: -100%;
     }
     50% {
-        transform: translateX(0%) skewX(-20deg);
-        opacity: 0.35;
+        left: 0;
     }
     100% {
-        transform: translateX(100%) skewX(-20deg);
-        opacity: 0;
+        left: 100%;
     }
 }

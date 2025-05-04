@@ -71,7 +71,7 @@ export default function Home() {
       <About />
       <AboutProfession />
       <News />
-      <VideoCarousel />
+      {/*<VideoCarousel />*/}
       <Contact />
       <ScrollButton/>
     </>
