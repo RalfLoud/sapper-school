@@ -4,21 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68666108-b731-43d2-a3b8-7af1dffcb88a" name="Changes" comment="button expand mobile">
-      <change afterPath="$PROJECT_DIR$/components/CertificateSection.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/CourseContent.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/EmployersSection.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/FAQ.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/LearnSkills.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/PriceBlock.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ResumeBlock.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/TrainingLocation.jsx" afterDir="false" />
+    <list default="true" id="68666108-b731-43d2-a3b8-7af1dffcb88a" name="Changes" comment="final block">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/About.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/About.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Hero.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Hero.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +89,7 @@
       <workItem from="1746259262784" duration="14000" />
       <workItem from="1746259316173" duration="21000" />
       <workItem from="1746277823705" duration="5172000" />
-      <workItem from="1746331369220" duration="23588000" />
+      <workItem from="1746331369220" duration="24151000" />
     </task>
     <task id="LOCAL-00001" summary="fix pj">
       <option name="closed" value="true" />
@@ -183,7 +171,23 @@
       <option name="project" value="LOCAL" />
       <updated>1746340094991</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="final block">
+      <option name="closed" value="true" />
+      <created>1746362647654</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1746362647655</updated>
+    </task>
+    <task id="LOCAL-00012" summary="final block">
+      <option name="closed" value="true" />
+      <created>1746362655008</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1746362655008</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,6 +214,7 @@
     <MESSAGE value="shiny button" />
     <MESSAGE value="button expand" />
     <MESSAGE value="button expand mobile" />
-    <option name="LAST_COMMIT_MESSAGE" value="button expand mobile" />
+    <MESSAGE value="final block" />
+    <option name="LAST_COMMIT_MESSAGE" value="final block" />
   </component>
 </project>
