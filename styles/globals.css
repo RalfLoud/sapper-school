@@ -116,3 +116,41 @@ html {
         left: 100%;
     }
 }
+
+.employer-cell::after,
+.employer-cell::before {
+    background-color: #89f901; /* ярче */
+    content: "";
+    position: absolute;
+    pointer-events: none;
+}
+
+.employer-cell::after {
+    right: -10%;
+    top: -20%;
+    bottom: -10%;
+    width: 1px;
+    opacity: 0.5;
+}
+
+.employer-cell::before {
+    left: -10%;
+    right: -10%;
+    bottom: -10%;
+    height: 1px;
+    opacity: 0.5;
+}
+
+/* Убираем правую линию у последнего в ряду */
+.employer-cell.no-right::after {
+    display: none;
+}
+
+/* Убираем нижнюю линию у последних в колонке */
+.employer-cell.no-bottom::before {
+    display: none;
+}
+
+.transition-max-height {
+    transition: max-height 0.5s ease-in-out;
+}

@@ -7,13 +7,16 @@ const Hero = () => {
     >
       <div className="absolute inset-0 bg-[#0d0d0d] bg-opacity-50"></div>
       
-      <div className="z-10 text-center px-4 max-w-3xl">
-        <h1 className="text-5xl font-bold mb-4 tracking-tight">
-          Школа обучение саперов
+      <div className="z-10 text-start px-4 max-w-3xl">
+        <h1 className=" md:text-4xl text-2xl font-bold mb-4 tracking-tight">
+          Получите профессию
+          Сапер гуманитарного разминирования
         </h1>
-        <p className="text-xl text-gray-200">
-          Технологии, стратегия и действие.
-        </p>
+        <ul className="text-xl flex ml-4 flex-col text-start text-gray-200">
+          <li className="text-sm list-disc text-gray-300" >Вы научитесь поиску и разминированию взрывоопасных предметов любой сложности</li>
+          <li className="text-sm list-disc text-gray-300" >Отработаете знания на практике в условиях, приближенных к реальным рабочим ситуациям</li>
+          <li className="text-sm list-disc text-gray-300" >Сможете начать процедуру трудоустройства по специальности уже через 13 дней обучения</li>
+        </ul>
       </div>
     </section>
   );

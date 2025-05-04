@@ -2,6 +2,8 @@ import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import Skeleton from "../components/Skeleton";
 import ScrollButton from "@/components/ScrollButton";
+import TrainingLocation from "@/components/TrainingLocation";
+import Footer from "@/components/Footer";
 
 // ⏳ Скелетоны
 const AboutProfessionSkeleton = () => (
@@ -54,14 +56,39 @@ const News = dynamic(() => import("../components/News"), {
   ssr: false,
   loading: () => <NewsSkeleton />,
 });
-const VideoCarousel = dynamic(() => import("../components/VideoCarousel"), {
-  ssr: false,
-  loading: () => <VideoSkeleton />,
-});
+// const VideoCarousel = dynamic(() => import("../components/VideoCarousel"), {
+//   ssr: false,
+//   loading: () => <VideoSkeleton />,
+// });
 const Contact = dynamic(() => import("../components/ContactForm"), {
   ssr: false,
   loading: () => <ContactSkeleton />,
 });
+
+const LearnSkills = dynamic(() => import("../components/LearnSkills"), {
+  ssr: false,
+});
+
+const CourseContent = dynamic(() => import("../components/CourseContent"), {
+  ssr: false,
+});
+
+const CertificateSection = dynamic(() => import("@/components/CertificateSection"), { ssr: false });
+
+
+const EmployersSection = dynamic(() => import("@/components/EmployersSection"), { ssr: false });
+
+
+const ResumeBlock = dynamic(() => import("@/components/ResumeBlock"), { ssr: false });
+
+
+const PriceBlock = dynamic(() => import("@/components/PriceBlock"), { ssr: false });
+
+
+const FAQ = dynamic(() => import("@/components/FAQ"), { ssr: false });
+
+
+
 
 export default function Home() {
   return (
@@ -70,10 +97,19 @@ export default function Home() {
       <Hero />
       <About />
       <AboutProfession />
-      <News />
+      <TrainingLocation/>
+      {/*<News />*/}
+      <LearnSkills/>
+      <CourseContent/>
+      <CertificateSection/>
+      <EmployersSection/>
+      <ResumeBlock/>
+      <PriceBlock/>
+      <FAQ/>
       {/*<VideoCarousel />*/}
       <Contact />
       <ScrollButton/>
+      <Footer/>
     </>
   );
 }

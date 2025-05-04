@@ -24,7 +24,7 @@ const Navbar = () => {
         <div className="flex items-center space-x-2">
           <img src="/logo.png" alt="Logo" className="h-8" />
           <span className="font-bold text-white text-sm md:text-base uppercase">
-            ИНЖЕНЕРНО-САПЁРНЫЙ БАТАЛЬОН
+            Школа разминирования
           </span>
         </div>
         

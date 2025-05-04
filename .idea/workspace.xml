@@ -5,10 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68666108-b731-43d2-a3b8-7af1dffcb88a" name="Changes" comment="button expand mobile">
-      <change afterPath="$PROJECT_DIR$/components/elements/Divider.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/CertificateSection.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/CourseContent.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/EmployersSection.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/FAQ.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/LearnSkills.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/PriceBlock.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ResumeBlock.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/TrainingLocation.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/AboutProfession.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/AboutProfession.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ScrollButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ScrollButton.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/About.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/About.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Hero.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Hero.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +101,7 @@
       <workItem from="1746259262784" duration="14000" />
       <workItem from="1746259316173" duration="21000" />
       <workItem from="1746277823705" duration="5172000" />
-      <workItem from="1746331369220" duration="7880000" />
+      <workItem from="1746331369220" duration="23588000" />
     </task>
     <task id="LOCAL-00001" summary="fix pj">
       <option name="closed" value="true" />
@@ -165,7 +175,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746338294840</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="button expand mobile">
+      <option name="closed" value="true" />
+      <created>1746340094991</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1746340094991</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
