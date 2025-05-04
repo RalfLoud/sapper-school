@@ -23,7 +23,7 @@ const SectionWrapper = ({ id, children, className = "" }) => {
       </div>
       
       {/* Контент */}
-      <div className="relative z-10 max-w-6xl mx-auto flex flex-col items-center justify-center text-center min-h-[calc(100vh-160px)]">
+      <div className="relative z-10 max-w-6xl mx-auto flex flex-col items-center justify-center min-h-[calc(100vh-160px)]">
         {children}
       </div>
     </section>

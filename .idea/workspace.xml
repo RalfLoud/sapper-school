@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68666108-b731-43d2-a3b8-7af1dffcb88a" name="Changes" comment="burger menu">
-      <change afterPath="$PROJECT_DIR$/components/Skeleton.jsx" afterDir="false" />
+    <list default="true" id="68666108-b731-43d2-a3b8-7af1dffcb88a" name="Changes" comment="lazy load &amp;&amp; skeleton">
+      <change afterPath="$PROJECT_DIR$/components/AboutProfession.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ScrollButton.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SectionWrapper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SectionWrapper.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +51,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/ralf/Downloads/sapper-school/public&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ralf/Downloads/oisb-school-bot&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -85,7 +88,12 @@
       <workItem from="1746075729061" duration="18994000" />
       <workItem from="1746100023146" duration="10631000" />
       <workItem from="1746160536407" duration="4418000" />
-      <workItem from="1746192223717" duration="1862000" />
+      <workItem from="1746192223717" duration="2191000" />
+      <workItem from="1746259127672" duration="127000" />
+      <workItem from="1746259262784" duration="14000" />
+      <workItem from="1746259316173" duration="21000" />
+      <workItem from="1746277823705" duration="5172000" />
+      <workItem from="1746331369220" duration="301000" />
     </task>
     <task id="LOCAL-00001" summary="fix pj">
       <option name="closed" value="true" />
@@ -135,7 +143,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746193131782</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="lazy load &amp;&amp; skeleton">
+      <option name="closed" value="true" />
+      <created>1746194465165</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1746194465165</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +174,7 @@
     <MESSAGE value="grainy texture carbon" />
     <MESSAGE value="grainy texture carbon fix metadata" />
     <MESSAGE value="burger menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="burger menu" />
+    <MESSAGE value="lazy load &amp;&amp; skeleton" />
+    <option name="LAST_COMMIT_MESSAGE" value="lazy load &amp;&amp; skeleton" />
   </component>
 </project>

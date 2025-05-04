@@ -1,8 +1,19 @@
 import dynamic from "next/dynamic";
-import Skeleton from "../components/Skeleton";
 import Navbar from "@/components/Navbar";
+import Skeleton from "../components/Skeleton";
+import ScrollButton from "@/components/ScrollButton";
 
-// 🔄 Скелетоны:
+// ⏳ Скелетоны
+const AboutProfessionSkeleton = () => (
+  <div className="max-w-4xl mx-auto px-4 py-20 space-y-4">
+    <Skeleton height="h-8" width="w-2/3" />
+    <Skeleton height="h-5" width="w-full" />
+    <Skeleton height="h-5" width="w-5/6" />
+    <Skeleton height="h-5" width="w-4/6" />
+    <Skeleton height="h-6" width="w-40" className="mt-4" />
+  </div>
+);
+
 const NewsSkeleton = () => (
   <div className="max-w-6xl mx-auto px-4 py-12 space-y-6">
     {[1, 2, 3].map((i) => (
@@ -32,9 +43,13 @@ const ContactSkeleton = () => (
   </div>
 );
 
-// 🔄 Lazy load секций
+// 🔄 Dynamic imports
 const Hero = dynamic(() => import("../components/Hero"));
 const About = dynamic(() => import("../components/About"));
+const AboutProfession = dynamic(() => import("../components/AboutProfession"), {
+  ssr: false,
+  loading: () => <AboutProfessionSkeleton />,
+});
 const News = dynamic(() => import("../components/News"), {
   ssr: false,
   loading: () => <NewsSkeleton />,
@@ -51,12 +66,14 @@ const Contact = dynamic(() => import("../components/ContactForm"), {
 export default function Home() {
   return (
     <>
-      <Navbar/>
+      <Navbar />
       <Hero />
       <About />
+      <AboutProfession />
       <News />
       <VideoCarousel />
       <Contact />
+      <ScrollButton/>
     </>
   );
 }

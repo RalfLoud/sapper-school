@@ -80,3 +80,54 @@ html {
         background-color: #0d0d0d;
     }
 }
+
+.wave-button {
+    position: relative;
+    display: inline-block;
+    padding: 24px 56px;
+    background-color: #89f901;
+    color: #000;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px #00000030;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.wave-button:hover {
+    transform: scale(1.05);
+}
+
+.wave-button span {
+    position: relative;
+    z-index: 2;
+}
+
+.wave-button::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255, 45) 100%);
+    animation: waveAnimation 3s ease-in-out infinite;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes waveAnimation {
+    0% {
+        transform: translateX(-100%) skewX(-20deg);
+        opacity: 0.2;
+    }
+    50% {
+        transform: translateX(0%) skewX(-20deg);
+        opacity: 0.35;
+    }
+    100% {
+        transform: translateX(100%) skewX(-20deg);
+        opacity: 0;
+    }
+}
