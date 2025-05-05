@@ -5,6 +5,17 @@ import ScrollButton from "@/components/ScrollButton";
 import TrainingLocation from "@/components/TrainingLocation";
 import Footer from "@/components/Footer";
 
+export async function getStaticProps() {
+  const res = await fetch('http://193.188.23.149:1337/api/faqs2easd222222asd');
+  const data = await res.json();
+  return {
+    props: {
+      articles: data.data,
+    }
+     // ISR: страница обновляется каждые 60 секунд
+  };
+}
+
 // ⏳ Скелетоны
 const AboutProfessionSkeleton = () => (
   <div className="max-w-4xl mx-auto px-4 py-20 space-y-4">
@@ -90,7 +101,7 @@ const FAQ = dynamic(() => import("@/components/FAQ"), { ssr: false });
 
 
 
-export default function Home() {
+export default function Home({articles}) {
   return (
     <>
       <Navbar />
@@ -105,7 +116,7 @@ export default function Home() {
       <EmployersSection/>
       <ResumeBlock/>
       <PriceBlock/>
-      <FAQ/>
+      <FAQ articles={articles}/>
       {/*<VideoCarousel />*/}
       <Contact />
       <ScrollButton/>

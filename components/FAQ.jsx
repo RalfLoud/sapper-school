@@ -1,34 +1,18 @@
 import {useState} from "react";
 import {FaChevronDown} from "react-icons/fa";
 
-const faqs = [{
-  question: "Где востребовано итоговое свидетельство о прохождении обучения?",
-  answer: "Документ Минобороны РФ принимается государственными и частными структурами в РФ и за рубежом.",
-}, {
-  question: "Как быстро я найду работу после курса?",
-  answer: "Сразу после окончания возможны предложения от партнёров — трудоустройство с поддержкой центра.",
-}, {
-  question: "Чем нас будут кормить во время обучения?", answer: "Предусмотрено трёхразовое горячее питание в столовой.",
-}, {
-  question: "Есть ли у вас официальное соглашение с ФБУ 'МПЦ ВС России'?",
-  answer: "Да, обучение проходит на базе официального партнёрства.",
-}, {
-  question: "Могу ли я после окончания обучения претендовать на службу по контракту в ВС РФ по специальности?",
-  answer: "Да, при наличии желания и медицинских показаний возможно.",
-},];
 
-const FAQ = () => {
+
+const FAQ = ({articles}) => {
   const [openIndex, setOpenIndex] = useState(null);
-  
   const toggle = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
-  
   return (<section id="faq" className="bg-[#0d0d0d] text-white px-4 md:px-6 py-20">
     <div className="max-w-4xl mx-auto">
       <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Часто задаваемые вопросы</h2>
       <div className="space-y-4">
-        {faqs.map((faq, index) => {
+        {articles.map((article, index) => {
           const isOpen = index === openIndex;
           return (<div
             key={index}
@@ -41,7 +25,7 @@ const FAQ = () => {
               <div className="flex items-center gap-3 flex-grow overflow-hidden">
                 <span className={`w-3 h-3 rounded-full transition-all flex-shrink-0 ${isOpen ? "bg-red-600" : "bg-[#89f901]"}`}></span>
                 <span className="text-base font-medium break-words">
-                    {faq.question}
+                    {article.question}
                   </span>
               </div>
               <FaChevronDown
@@ -55,7 +39,7 @@ const FAQ = () => {
                 isOpen ? "max-h-[500px]" : "max-h-0"
               }`}
             >
-              <p className="text-gray-300 px-6 pb-4 pt-2">{faq.answer}</p>
+              <p className="text-gray-300 px-6 pb-4 pt-2">{article.ansewer}</p>
             </div>
           </div>);
         })}

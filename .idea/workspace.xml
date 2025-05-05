@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68666108-b731-43d2-a3b8-7af1dffcb88a" name="Changes" comment="final block">
+    <list default="true" id="68666108-b731-43d2-a3b8-7af1dffcb88a" name="Changes" comment="CMS ready">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/FAQ.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/FAQ.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +90,7 @@
       <workItem from="1746259262784" duration="14000" />
       <workItem from="1746259316173" duration="21000" />
       <workItem from="1746277823705" duration="5172000" />
-      <workItem from="1746331369220" duration="24151000" />
+      <workItem from="1746331369220" duration="33258000" />
     </task>
     <task id="LOCAL-00001" summary="fix pj">
       <option name="closed" value="true" />
@@ -187,7 +188,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746362655008</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="image unoptimized: true">
+      <option name="closed" value="true" />
+      <created>1746363306621</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1746363306621</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,6 +224,8 @@
     <MESSAGE value="button expand" />
     <MESSAGE value="button expand mobile" />
     <MESSAGE value="final block" />
-    <option name="LAST_COMMIT_MESSAGE" value="final block" />
+    <MESSAGE value="image unoptimized: true" />
+    <MESSAGE value="CMS ready" />
+    <option name="LAST_COMMIT_MESSAGE" value="CMS ready" />
   </component>
 </project>
