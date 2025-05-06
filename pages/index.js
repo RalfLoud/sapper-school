@@ -6,7 +6,6 @@ import ScrollButton from "@/components/ScrollButton";
 import TrainingLocation from "@/components/TrainingLocation";
 import Skeleton from "@/components/Skeleton";
 
-// 👇 Динамические импорты с fallback'ами, только если нужно
 const Hero = dynamic(() => import("../components/Hero")); // в первом экране — лучше не lazy
 const About = dynamic(() => import("../components/About"));
 
@@ -23,11 +22,10 @@ const ResumeBlock = dynamic(() => import("@/components/ResumeBlock"));
 const PriceBlock = dynamic(() => import("@/components/PriceBlock"));
 const FAQ = dynamic(() => import("@/components/FAQ"));
 const Contact = dynamic(() => import("../components/ContactForm"), {
-  ssr: false,
+  ssr: true,
   loading: () => <Skeleton height="h-10" width="w-3/4" />,
 });
 
-// 💾 SSG + ISR
 export async function getStaticProps() {
   const res = await fetch("http://193.188.23.149:1337/api/faqs2easd222222asd");
   const data = await res.json();
@@ -36,7 +34,7 @@ export async function getStaticProps() {
     props: {
       articles: data.data || [],
     },
-    revalidate: 60, // ⏳ каждые 60 сек можно перегенерировать
+    revalidate: 60,
   };
 }
 

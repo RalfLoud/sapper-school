@@ -4,49 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68666108-b731-43d2-a3b8-7af1dffcb88a" name="Changes" comment="CMS ready">
+    <list default="true" id="68666108-b731-43d2-a3b8-7af1dffcb88a" name="Changes" comment="optimization">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/CertificateSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CertificateSection.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/EmployersSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/EmployersSection.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Hero.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Hero.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/LearnSkills.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/LearnSkills.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/News.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/News.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ResumeBlock.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ResumeBlock.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/TrainingLocation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/TrainingLocation.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ContactForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ContactForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/employers/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/employers/10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/employers/11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/employers/12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/employers/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/employers/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/employers/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/employers/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/employers/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/employers/8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fkqozm7v.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/hero-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/certificate.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/mpc1.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/mpc1.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/mpc2.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/training1.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/training2.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/training3.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/training4.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/training5.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/training6.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/training7.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/training8.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/news/1.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/news/2.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/news/3.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/resume/avatar.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,6 +96,7 @@
       <workItem from="1746331369220" duration="33966000" />
       <workItem from="1746422746537" duration="9346000" />
       <workItem from="1746448378715" duration="9028000" />
+      <workItem from="1746506840096" duration="3995000" />
     </task>
     <task id="LOCAL-00001" summary="fix pj">
       <option name="closed" value="true" />
@@ -245,7 +210,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746420280951</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="optimization">
+      <option name="closed" value="true" />
+      <created>1746506884123</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1746506884123</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,6 +248,7 @@
     <MESSAGE value="final block" />
     <MESSAGE value="image unoptimized: true" />
     <MESSAGE value="CMS ready" />
-    <option name="LAST_COMMIT_MESSAGE" value="CMS ready" />
+    <MESSAGE value="optimization" />
+    <option name="LAST_COMMIT_MESSAGE" value="optimization" />
   </component>
 </project>
