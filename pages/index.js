@@ -5,6 +5,8 @@ import Footer from "@/components/Footer";
 import ScrollButton from "@/components/ScrollButton";
 import TrainingLocation from "@/components/TrainingLocation";
 import Skeleton from "@/components/Skeleton";
+import News from "@/components/News";
+import VideoCarousel from "@/components/VideoCarousel";
 
 const Hero = dynamic(() => import("../components/Hero")); // в первом экране — лучше не lazy
 const About = dynamic(() => import("../components/About"));
@@ -23,22 +25,35 @@ const PriceBlock = dynamic(() => import("@/components/PriceBlock"));
 const FAQ = dynamic(() => import("@/components/FAQ"));
 const Contact = dynamic(() => import("../components/ContactForm"), {
   ssr: true,
-  loading: () => <Skeleton height="h-10" width="w-3/4" />,
+  loading: () => <Skeleton height="h-60" width="w-full" />,
 });
 
 export async function getStaticProps() {
-  const res = await fetch("http://193.188.23.149:1337/api/faqs2easd222222asd");
-  const data = await res.json();
-  
+  const [res1, res2, res3, res4] = await Promise.all([
+    fetch("http://193.188.23.149:1337/api/faqs2easd222222asd"),
+    fetch("http://193.188.23.149:1337/api/teach-dates"),
+    fetch("http://193.188.23.149:1337/api/news?populate=picture"),
+    fetch("http://193.188.23.149:1337/api/videolists"),
+    
+  ]);
+  const [articles, teachDates, news, videoIds] = await Promise.all([
+    res1.json(),
+    res2.json(),
+    res3.json(),
+    res4.json(),
+  ])
   return {
     props: {
-      articles: data.data || [],
+      articles: articles.data || [],
+      teachDates: teachDates.data || [],
+      news: news.data || [],
+      videoIds: videoIds.data || [],
     },
     revalidate: 60,
   };
 }
 
-export default function Home({ articles }) {
+export default function Home({ articles, teachDates, news, videoIds }) {
   return (
     <>
       <Head>
@@ -55,7 +70,7 @@ export default function Home({ articles }) {
       <Navbar />
       <Hero />
       <About />
-      <AboutProfession />
+      <AboutProfession teachDates={teachDates} />
       <TrainingLocation />
       <LearnSkills />
       <CourseContent />
@@ -64,6 +79,8 @@ export default function Home({ articles }) {
       <ResumeBlock />
       <PriceBlock />
       <FAQ articles={articles} />
+      <News news={news}/>
+      <VideoCarousel videoIds={videoIds}/>
       <Contact />
       <ScrollButton />
       <Footer />

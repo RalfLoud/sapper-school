@@ -1,108 +1,121 @@
-import { useRef } from "react";
-import Slider from "react-slick";
-import useInView from "../hooks/useInView";
-import SectionWrapper from "./SectionWrapper";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import VideoModal from "./elements/VideoModal";
 
-const NextArrow = ({ onClick }) => (
-  <div
-    className="absolute right-0 top-1/2 -translate-y-1/2 z-10 cursor-pointer border border-gray-700 bg-black p-3 text-white hover:bg-primary transition"
-    onClick={onClick}
-  >
-    <FaChevronRight />
-  </div>
-);
-
-const PrevArrow = ({ onClick }) => (
-  <div
-    className="absolute left-0 top-1/2 -translate-y-1/2 z-10 cursor-pointer border border-gray-700 bg-black p-3 text-white hover:bg-primary transition"
-    onClick={onClick}
-  >
-    <FaChevronLeft />
-  </div>
-);
-
-const VideoCarousel = () => {
-  const playerRefs = useRef([]);
+export default function VideoCarousel({ videoIds }) {
+  const [openId, setOpenId] = useState(null);
+  const scrollRef = useRef(null);
+  const hoverRef = useRef(false);
+  const intervalRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
   
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
+  const scrollBy = (amount) => {
+    scrollRef.current.scrollBy({ left: amount, behavior: "smooth" });
   };
   
-  const videos = [
-    "https://www.youtube.com/embed/rHxIMzprxX4",
-    "https://www.youtube.com/embed/nxL9KQKgsLg",
-    "https://www.youtube.com/embed/KBLAd7eLXdc",
-    "https://www.youtube.com/embed/-R8j5p8IWdA",
-    "https://www.youtube.com/embed/m2DI0I1lY-I",
-  ];
-  
-  const handleMouseEnter = (index) => {
-    const iframe = playerRefs.current[index];
-    iframe?.contentWindow?.postMessage(
-      '{"event":"command","func":"playVideo","args":""}',
-      "*"
-    );
+  const scrollToIndex = (index) => {
+    const itemWidth = scrollRef.current.querySelector(".video-item")?.offsetWidth + 24;
+    scrollRef.current.scrollTo({ left: index * itemWidth, behavior: "smooth" });
+    setActiveIndex(index);
   };
   
-  const handleMouseLeave = (index) => {
-    const iframe = playerRefs.current[index];
-    iframe?.contentWindow?.postMessage(
-      '{"event":"command","func":"pauseVideo","args":""}',
-      "*"
-    );
-  };
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    if (!scrollContainer) return;
+    
+    const itemWidth = scrollContainer.querySelector(".video-item")?.offsetWidth + 24;
+    
+    const startAutoScroll = () => {
+      intervalRef.current = setInterval(() => {
+        if (!hoverRef.current) {
+          const nextIndex = (activeIndex + 1) % videoIds.length;
+          scrollToIndex(nextIndex);
+        }
+      }, 5000);
+    };
+    
+    startAutoScroll();
+    return () => clearInterval(intervalRef.current);
+  }, [activeIndex, videoIds.length]);
   
   return (
-    <SectionWrapper id="videos">
-      <h2 className="text-3xl font-bold mb-8">Видеообзор</h2>
-      <div className="w-full">
-        <Slider {...settings}>
-          {videos.map((url, index) => (
-            <div key={index} className="px-2">
-              <div
-                className="aspect-video border border-gray-700"
-                onMouseEnter={() => handleMouseEnter(index)}
-                onMouseLeave={() => handleMouseLeave(index)}
-              >
-                <iframe
-                  ref={(el) => (playerRefs.current[index] = el)}
-                  className="w-full h-full"
-                  src={`${url}?enablejsapi=1&rel=0&modestbranding=1`}
-                  title={`YouTube Video ${index}`}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+    <section className="py-16 text-white text-center relative" id="videos">
+      <h2 className="text-3xl font-bold mb-12">Видеообзор</h2>
+      
+      <div
+        className="relative max-w-screen-xl mx-auto"
+        onMouseEnter={() => (hoverRef.current = true)}
+        onMouseLeave={() => (hoverRef.current = false)}
+      >
+        <button
+          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 text-4xl text-white hover:scale-110 transition"
+          onClick={() => {
+            const prevIndex = (activeIndex - 1 + videoIds.length) % videoIds.length;
+            scrollToIndex(prevIndex);
+          }}
+        >
+          ❮
+        </button>
+        
+        <div
+          ref={scrollRef}
+          className="flex gap-6 overflow-x-auto scroll-smooth px-4 snap-x snap-mandatory no-scrollbar"
+        >
+          {videoIds.map((video, index) => (
+            <motion.div
+              key={video.videoid + index}
+              className="video-item snap-start shrink-0 w-full sm:w-1/2 lg:w-1/3 cursor-pointer rounded-lg overflow-hidden relative group shadow-lg hover:scale-105 transition-transform duration-300"
+              onClick={() => setOpenId(video.videoid)}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: index * 0.15 }}
+              viewport={{ once: true }}
+            >
+              <img
+                src={`https://img.youtube.com/vi/${video.videoid}/hqdefault.jpg`}
+                alt={video.videoid}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                <div className="bg-white bg-opacity-20 p-3 rounded-full">
+                  <svg
+                    className="w-12 h-12 text-red-600"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M10 8.64L15.27 12 10 15.36V8.64z" />
+                    <path d="M8 5v14l11-7L8 5z" />
+                  </svg>
+                </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </Slider>
+        </div>
+        
+        <button
+          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 text-4xl text-white hover:scale-110 transition"
+          onClick={() => {
+            const nextIndex = (activeIndex + 1) % videoIds.length;
+            scrollToIndex(nextIndex);
+          }}
+        >
+          ❯
+        </button>
       </div>
-    </SectionWrapper>
+      
+      <div className="flex justify-center mt-6 gap-2">
+        {videoIds.map((_, i) => (
+          <span
+            key={i}
+            onClick={() => scrollToIndex(i)}
+            className={`h-2 w-2 rounded-full transition-all duration-300 cursor-pointer ${
+              activeIndex === i ? "bg-white scale-125" : "bg-gray-500"
+            }`}
+          ></span>
+        ))}
+      </div>
+      
+      {openId && <VideoModal videoId={openId} onClose={() => setOpenId(null)} />}
+    </section>
   );
-};
-
-export default VideoCarousel;
+}

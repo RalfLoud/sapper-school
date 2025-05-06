@@ -1,5 +1,6 @@
 import SectionWrapper from "./SectionWrapper";
 import Image from "next/image";
+import Divider from "@/components/elements/Divider";
 
 const skills = [
   "поиск, извлечение и уничтожение взрывоопасных предметов",
@@ -52,6 +53,7 @@ const WhatYouLearn = () => {
             </div>
           ))}
         </div>
+        <Divider />
       </div>
     </SectionWrapper>
   );

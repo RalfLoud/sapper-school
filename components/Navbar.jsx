@@ -23,7 +23,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Лого */}
         <div className="flex items-center space-x-2">
-          <Image src="/logo.webp" alt="Logo" width={45} height={45}/>
+          <Image src="/logo.webp" alt="Logo" priority width={45} height={45}/>
           <span className="font-bold text-white text-sm md:text-base uppercase">
             Школа разминирования
           </span>

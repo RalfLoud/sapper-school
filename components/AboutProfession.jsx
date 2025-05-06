@@ -1,27 +1,27 @@
 import SectionWrapper from './SectionWrapper';
 import Divider from "@/components/elements/Divider";
 
-const AboutProfession = () => {
+const AboutProfession = ({teachDates}) => {
   return (
     <SectionWrapper id="profession">
       {/* Инфо-блок */}
       <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-lg text-center text-gray-400 mb-12">
         <div>
           <div className="mb-1">Когда</div>
-          <div className="text-white font-semibold">11 мая по 23 мая</div>
+          <div className="text-white font-semibold">{teachDates[0].when}</div>
         </div>
         <div>
           <div className="mb-1">Длительность</div>
-          <div className="text-white font-semibold">13 дней</div>
+          <div className="text-white font-semibold">{teachDates[0].duration}</div>
         </div>
         <div>
           <div className="mb-1">Формат</div>
-          <div className="text-white font-semibold">Очно</div>
+          <div className="text-white font-semibold">{teachDates[0].format}</div>
         </div>
         <div>
           <div className="mb-1">Документ</div>
           <div className="text-white font-semibold leading-snug">
-            Государственного образца<br /> Министерства обороны РФ<br />(свидетельство)
+            {teachDates[0].doc}
           </div>
         </div>
       </div>
