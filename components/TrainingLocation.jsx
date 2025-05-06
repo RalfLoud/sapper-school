@@ -25,20 +25,20 @@ const TrainingLocation = () => {
       
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-2 max-w-6xl mx-auto">
         <div className="rounded overflow-hidden shadow-md">
-          <img
+          <Image
             src="/images/mpc1.webp"
             alt="Международный центр"
-            // width={500}
-            // height={300}
+            width={500}
+            height={300}
             className="w-full h-full object-cover"
           />
         </div>
         <div className="rounded overflow-hidden shadow-md">
-          <img
-            src="/images/mpc2.jpeg"
+          <Image
+            src="/images/mpc2.webp"
             alt="Академия инженерных войск"
-            // width={500}
-            // height={300}
+            width={500}
+            height={300}
             className="w-full h-auto object-cover"
           />
         </div>

@@ -14,7 +14,7 @@ const News = () => {
         {items.map((item, i) => (
           <div key={i} className="border border-gray-700 bg-[#0d0d0d] hover:scale-[1.03] hover:shadow-xl transition-all">
             <div className="aspect-video overflow-hidden">
-              <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
+              <Image src={item.image} alt={item.title} className="w-full h-full object-cover" />
             </div>
             <div className="p-6 text-left">
               <h3 className="text-lg font-semibold mb-2">{item.title}</h3>

@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import useScrollSpy from "../hooks/useScrollSpy";
+import Image from "next/image";
 import Link from "next/link";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const activeId = useScrollSpy(["home", "about", "news", "videos", "contact"], 100);
+  const activeId = useScrollSpy(["home", "about", "profession", "training", "contact"], 100);
   
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
@@ -22,7 +23,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Лого */}
         <div className="flex items-center space-x-2">
-          <img src="/logo.png" alt="Logo" className="h-8" />
+          <Image src="/logo.webp" alt="Logo" width={45} height={45}/>
           <span className="font-bold text-white text-sm md:text-base uppercase">
             Школа разминирования
           </span>
@@ -32,8 +33,8 @@ const Navbar = () => {
         <div className="hidden md:flex space-x-6 text-sm font-medium uppercase tracking-wider">
           <a href="#home" className={linkClass("home")}>Главная</a>
           <a href="#about" className={linkClass("about")}>О нас</a>
-          <a href="#news" className={linkClass("news")}>Новости</a>
-          <a href="#videos" className={linkClass("videos")}>Видео</a>
+          <a href="#profession" className={linkClass("profession")}>Профессии</a>
+          <a href="#training" className={linkClass("training")}>Где проходит</a>
           <a href="#contact" className={linkClass("contact")}>Контакты</a>
         </div>
         
@@ -68,8 +69,8 @@ const Navbar = () => {
         <nav className="flex flex-col items-start p-6 space-y-6 text-sm uppercase tracking-wider">
           <a onClick={handleClose} href="#home" className={linkClass("home")}>Главная</a>
           <a onClick={handleClose} href="#about" className={linkClass("about")}>О нас</a>
-          <a onClick={handleClose} href="#news" className={linkClass("news")}>Новости</a>
-          <a onClick={handleClose} href="#videos" className={linkClass("videos")}>Видео</a>
+          <a onClick={handleClose} href="#profession" className={linkClass("profession")}>О профессии</a>
+          <a onClick={handleClose} href="#training" className={linkClass("training")}>Где проходит</a>
           <a onClick={handleClose} href="#contact" className={linkClass("contact")}>Контакты</a>
         </nav>
       </div>

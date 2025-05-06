@@ -1,126 +1,74 @@
 import dynamic from "next/dynamic";
+import Head from "next/head";
 import Navbar from "@/components/Navbar";
-import Skeleton from "../components/Skeleton";
+import Footer from "@/components/Footer";
 import ScrollButton from "@/components/ScrollButton";
 import TrainingLocation from "@/components/TrainingLocation";
-import Footer from "@/components/Footer";
+import Skeleton from "@/components/Skeleton";
 
+// 👇 Динамические импорты с fallback'ами, только если нужно
+const Hero = dynamic(() => import("../components/Hero")); // в первом экране — лучше не lazy
+const About = dynamic(() => import("../components/About"));
+
+const AboutProfession = dynamic(() => import("../components/AboutProfession"), {
+  ssr: false,
+  loading: () => <Skeleton height="h-8" width="w-2/3" />,
+});
+
+const LearnSkills = dynamic(() => import("../components/LearnSkills"));
+const CourseContent = dynamic(() => import("../components/CourseContent"));
+const CertificateSection = dynamic(() => import("@/components/CertificateSection"));
+const EmployersSection = dynamic(() => import("@/components/EmployersSection"));
+const ResumeBlock = dynamic(() => import("@/components/ResumeBlock"));
+const PriceBlock = dynamic(() => import("@/components/PriceBlock"));
+const FAQ = dynamic(() => import("@/components/FAQ"));
+const Contact = dynamic(() => import("../components/ContactForm"), {
+  ssr: false,
+  loading: () => <Skeleton height="h-10" width="w-3/4" />,
+});
+
+// 💾 SSG + ISR
 export async function getStaticProps() {
-  const res = await fetch('http://193.188.23.149:1337/api/faqs2easd222222asd');
+  const res = await fetch("http://193.188.23.149:1337/api/faqs2easd222222asd");
   const data = await res.json();
+  
   return {
     props: {
-      articles: data.data,
-    }
-     // ISR: страница обновляется каждые 60 секунд
+      articles: data.data || [],
+    },
+    revalidate: 60, // ⏳ каждые 60 сек можно перегенерировать
   };
 }
 
-// ⏳ Скелетоны
-const AboutProfessionSkeleton = () => (
-  <div className="max-w-4xl mx-auto px-4 py-20 space-y-4">
-    <Skeleton height="h-8" width="w-2/3" />
-    <Skeleton height="h-5" width="w-full" />
-    <Skeleton height="h-5" width="w-5/6" />
-    <Skeleton height="h-5" width="w-4/6" />
-    <Skeleton height="h-6" width="w-40" className="mt-4" />
-  </div>
-);
-
-const NewsSkeleton = () => (
-  <div className="max-w-6xl mx-auto px-4 py-12 space-y-6">
-    {[1, 2, 3].map((i) => (
-      <div key={i} className="bg-[#111] p-6 rounded shadow">
-        <Skeleton height="h-48" />
-        <Skeleton height="h-6" width="w-1/3" className="mt-4" />
-        <Skeleton height="h-4" width="w-2/3" className="mt-2" />
-      </div>
-    ))}
-  </div>
-);
-
-const VideoSkeleton = () => (
-  <div className="max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-    {[...Array(3)].map((_, i) => (
-      <div key={i} className="aspect-video bg-gray-700 animate-pulse rounded" />
-    ))}
-  </div>
-);
-
-const ContactSkeleton = () => (
-  <div className="max-w-4xl mx-auto px-4 py-12 space-y-4">
-    <Skeleton height="h-10" width="w-3/4" />
-    <Skeleton height="h-10" width="w-full" />
-    <Skeleton height="h-32" width="w-full" />
-    <Skeleton height="h-10" width="w-40" />
-  </div>
-);
-
-// 🔄 Dynamic imports
-const Hero = dynamic(() => import("../components/Hero"));
-const About = dynamic(() => import("../components/About"));
-const AboutProfession = dynamic(() => import("../components/AboutProfession"), {
-  ssr: false,
-  loading: () => <AboutProfessionSkeleton />,
-});
-const News = dynamic(() => import("../components/News"), {
-  ssr: false,
-  loading: () => <NewsSkeleton />,
-});
-// const VideoCarousel = dynamic(() => import("../components/VideoCarousel"), {
-//   ssr: false,
-//   loading: () => <VideoSkeleton />,
-// });
-const Contact = dynamic(() => import("../components/ContactForm"), {
-  ssr: false,
-  loading: () => <ContactSkeleton />,
-});
-
-const LearnSkills = dynamic(() => import("../components/LearnSkills"), {
-  ssr: false,
-});
-
-const CourseContent = dynamic(() => import("../components/CourseContent"), {
-  ssr: false,
-});
-
-const CertificateSection = dynamic(() => import("@/components/CertificateSection"), { ssr: false });
-
-
-const EmployersSection = dynamic(() => import("@/components/EmployersSection"), { ssr: false });
-
-
-const ResumeBlock = dynamic(() => import("@/components/ResumeBlock"), { ssr: false });
-
-
-const PriceBlock = dynamic(() => import("@/components/PriceBlock"), { ssr: false });
-
-
-const FAQ = dynamic(() => import("@/components/FAQ"), { ssr: false });
-
-
-
-
-export default function Home({articles}) {
+export default function Home({ articles }) {
   return (
     <>
+      <Head>
+        <title>Школа сапёров</title>
+        <meta
+          name="description"
+          content="Получите профессию сапёра и научитесь безопасно работать с минами и взрывоопасными предметами."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="UTF-8" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      
       <Navbar />
       <Hero />
       <About />
       <AboutProfession />
-      <TrainingLocation/>
-      {/*<News />*/}
-      <LearnSkills/>
-      <CourseContent/>
-      <CertificateSection/>
-      <EmployersSection/>
-      <ResumeBlock/>
-      <PriceBlock/>
-      <FAQ articles={articles}/>
-      {/*<VideoCarousel />*/}
+      <TrainingLocation />
+      <LearnSkills />
+      <CourseContent />
+      <CertificateSection />
+      <EmployersSection />
+      <ResumeBlock />
+      <PriceBlock />
+      <FAQ articles={articles} />
       <Contact />
-      <ScrollButton/>
-      <Footer/>
+      <ScrollButton />
+      <Footer />
     </>
   );
 }

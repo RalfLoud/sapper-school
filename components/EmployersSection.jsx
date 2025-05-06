@@ -2,18 +2,18 @@ import Image from "next/image";
 import SectionWrapper from "./SectionWrapper";
 
 const logos = [
-  { src: "/employers/1.jpg", alt: "Минобороны" },
-  { src: "/employers/2.jpg", alt: "МЧС России" },
-  { src: "/employers/3.jpg", alt: "Росгвардия" },
-  { src: "/employers/4.jpg", alt: "Черноморнефтегаз" },
-  { src: "/employers/5.png", alt: "ВАД" },
+  { src: "/employers/1.webp", alt: "Минобороны" },
+  { src: "/employers/2.webp", alt: "МЧС России" },
+  { src: "/employers/3.webp", alt: "Росгвардия" },
+  { src: "/employers/4.webp", alt: "Черноморнефтегаз" },
+  { src: "/employers/5.webp", alt: "ВАД" },
   { src: "/employers/6.webp", alt: "Газпром" },
-  { src: "/employers/7.png", alt: "НИПИГАЗ" },
-  { src: "/employers/8.jpg", alt: "Россети" },
+  { src: "/employers/7.webp", alt: "НИПИГАЗ" },
+  { src: "/employers/8.webp", alt: "Россети" },
   { src: "/employers/9.webp", alt: "Роснефть" },
-  { src: "/employers/10.jpg", alt: "Транснефть" },
-  { src: "/employers/11.png", alt: "ПИК" },
-  { src: "/employers/12.png", alt: "ПИК" },
+  { src: "/employers/10.webp", alt: "Транснефть" },
+  { src: "/employers/11.webp", alt: "ПИК" },
+  { src: "/employers/12.webp", alt: "ПИК" },
 ];
 
 const EmployersSection = () => {
@@ -27,11 +27,13 @@ const EmployersSection = () => {
               key={idx}
               className="bg-white flex items-center justify-center p-4 aspect-square"
             >
-              <img
+              <Image
                 src={logo.src}
                 alt={logo.alt}
                 width={160}
                 height={80}
+                quality={60}
+                sizes="(max-width: 768px) 50vw, 160px"
                 className="object-contain h-full w-full"
               />
             </div>

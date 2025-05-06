@@ -11,9 +11,11 @@ const ResumeBlock = () => {
       <div className="rounded-lg shadow-xl p-6 md:p-10 max-w-5xl mx-auto border-[1px] border-gray-400 bg-gray-600 flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-10">
         {/* Аватарка */}
         <div className="flex-shrink-0">
-          <img
-            src="/resume/avatar.jpg" // Замени на свой путь
+          <Image
+            src="/resume/avatar.webp" // Замени на свой путь
             alt="Аватар"
+            width={20}
+            height={20}
             className="rounded-full w-20 h-20"
           />
         </div>

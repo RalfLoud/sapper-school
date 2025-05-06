@@ -18,7 +18,7 @@ const CertificateSection = () => {
             Советского Союза генерал-лейтенанта инженерных войск Д.М. Карбышева.
           </p>
           <a
-            href="/images/certificate.jpg"
+            href="/images/certificate.webp"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block mt-4 bg-gray-700 hover:bg-gray-600 text-sm font-bold px-5 py-4 rounded transition"
@@ -27,13 +27,12 @@ const CertificateSection = () => {
           </a>
         </div>
         
-        <div className="flex justify-center">
-          <img
-            src="/images/certificate.jpg"
+        <div className="flex h-full w-full relative justify-center">
+          <Image
+            src="/images/certificate.webp"
             alt="Сертификат"
-            // width={600}
-            // height={400}
-            className="rounded shadow-lg max-w-full h-full"
+            fill
+            className="rounded object-cover shadow-lg max-w-full "
           />
         </div>
       </div>

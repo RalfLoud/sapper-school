@@ -1,23 +1,43 @@
+import Image from "next/image";
+import { motion } from "framer-motion";
+
 const Hero = () => {
   return (
     <section
       id="home"
-      className="relative h-screen bg-[#0d0d0d] text-white flex items-center justify-center bg-cover bg-center"
-      style={{ backgroundImage: "url('/hero-bg.png')" }}
+      className="relative text-white flex items-center justify-center min-h-[600px] md:min-h-screen overflow-hidden"
     >
-      <div className="absolute inset-0 bg-[#0d0d0d] bg-opacity-50"></div>
+      {/* Фон */}
+      <Image
+        src="/hero-bg.webp"
+        alt="Фон Сапёрной школы"
+        fill
+        priority
+        quality={75}
+        className="object-cover"
+      />
       
-      <div className="z-10 text-start px-4 max-w-3xl">
-        <h1 className=" md:text-4xl text-2xl font-bold mb-4 tracking-tight">
-          Получите профессию
-          Сапер гуманитарного разминирования
+      {/* Затемнение */}
+      <div className="absolute inset-0 bg-black/60 z-0" />
+      
+      {/* Контент */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="relative z-10 px-4 md:px-6 py-24 md:py-36 max-w-3xl text-start"
+      >
+        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-6 tracking-tight leading-snug">
+          Получите профессию <br />
+          Сапёр гуманитарного разминирования
         </h1>
-        <ul className="text-xl flex ml-4 flex-col text-start text-gray-200">
-          <li className="text-sm list-disc text-gray-300" >Вы научитесь поиску и разминированию взрывоопасных предметов любой сложности</li>
-          <li className="text-sm list-disc text-gray-300" >Отработаете знания на практике в условиях, приближенных к реальным рабочим ситуациям</li>
-          <li className="text-sm list-disc text-gray-300" >Сможете начать процедуру трудоустройства по специальности уже через 13 дней обучения</li>
+        
+        <ul className="text-sm sm:text-base md:text-lg ml-4 flex flex-col gap-2 text-gray-200 list-disc">
+          <li>Вы научитесь поиску и разминированию взрывоопасных предметов любой сложности</li>
+          <li>Отработаете знания на практике в условиях, приближенных к реальным рабочим ситуациям</li>
+          <li>Сможете начать процедуру трудоустройства по специальности уже через 13 дней обучения</li>
         </ul>
-      </div>
+      </motion.div>
     </section>
   );
 };

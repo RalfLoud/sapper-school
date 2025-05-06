@@ -1,4 +1,5 @@
 import SectionWrapper from "./SectionWrapper";
+import Image from "next/image";
 
 const skills = [
   "поиск, извлечение и уничтожение взрывоопасных предметов",
@@ -10,14 +11,14 @@ const skills = [
 ];
 
 const images = [
-  "/images/training1.jpeg",
-  "/images/training2.jpeg",
-  "/images/training3.jpeg",
-  "/images/training4.jpeg",
-  "/images/training5.jpeg",
-  "/images/training6.jpeg",
-  "/images/training7.jpeg",
-  "/images/training8.jpeg",
+  "/images/training1.webp",
+  "/images/training2.webp",
+  "/images/training3.webp",
+  "/images/training4.webp",
+  "/images/training5.webp",
+  "/images/training6.webp",
+  "/images/training7.webp",
+  "/images/training8.webp",
 ];
 
 const WhatYouLearn = () => {
@@ -34,15 +35,23 @@ const WhatYouLearn = () => {
         ))}
       </ul>
       
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 px-4">
-        {images.map((src, i) => (
-          <img
-            key={i}
-            src={src}
-            alt={`training-${i + 1}`}
-            className="w-full h-full object-cover hover:scale-105 transition-all rounded shadow-md"
-          />
-        ))}
+      <div className="w-full">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
+          {images.map((src, i) => (
+            <div
+              key={i}
+              className="relative w-full aspect-[4/3] overflow-hidden rounded-md shadow-lg"
+            >
+              <Image
+                src={src}
+                alt={`training-${i + 1}`}
+                fill
+                sizes="(max-width: 768px) 50vw, 25vw"
+                className="object-cover transition-transform duration-300 hover:scale-105"
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </SectionWrapper>
   );
