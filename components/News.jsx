@@ -49,7 +49,7 @@ const News = ({ news }) => {
       
       {/* Кнопка */}
       {hasMore && (
-        <div className="mt-8 text-center">
+        <div className="mt-8 text-center pb-20">
           <button
             onClick={handleLoadMore}
             className="bg-gray-600 hover:bg-gray-800 text-black font-semibold px-6 py-2 hover:scale-105 rounded transition-all"

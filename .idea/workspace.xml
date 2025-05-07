@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68666108-b731-43d2-a3b8-7af1dffcb88a" name="Changes" comment="contact form update">
-      <change afterPath="$PROJECT_DIR$/components/elements/VideoModal.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rdy-for-captcha/middleware.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rdy-for-captcha/validate-captcha.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rdy-for-captcha/verify-captcha.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/AboutProfession.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/AboutProfession.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/LearnSkills.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/LearnSkills.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/News.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/News.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/VideoCarousel.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/VideoCarousel.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,6 +95,7 @@
       <workItem from="1746422746537" duration="9346000" />
       <workItem from="1746448378715" duration="9028000" />
       <workItem from="1746506840096" duration="28160000" />
+      <workItem from="1746598549753" duration="775000" />
     </task>
     <task id="LOCAL-00001" summary="fix pj">
       <option name="closed" value="true" />
