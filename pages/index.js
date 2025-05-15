@@ -29,11 +29,12 @@ const Contact = dynamic(() => import("../components/ContactForm"), {
 });
 
 export async function getStaticProps() {
+  const API_BASE = "https://russaper.ru/api"
   const [res1, res2, res3, res4] = await Promise.all([
-    fetch("http://193.188.23.149:1337/api/faqs2easd222222asd"),
-    fetch("http://193.188.23.149:1337/api/teach-dates"),
-    fetch("http://193.188.23.149:1337/api/news?populate=picture"),
-    fetch("http://193.188.23.149:1337/api/videolists"),
+    fetch(`${API_BASE}/faqs2easd222222asd`),
+    fetch(`${API_BASE}/teach-dates`),
+    fetch(`${API_BASE}/news?populate=picture`),
+    fetch(`${API_BASE}/videolists`),
     
   ]);
   const [articles, teachDates, news, videoIds] = await Promise.all([

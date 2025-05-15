@@ -8,6 +8,7 @@ const withAnalyzer = withBundleAnalyzer({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
+    domains: ['russaper.ru'],
     unoptimized: true
   },
 };

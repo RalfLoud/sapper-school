@@ -26,7 +26,7 @@ const News = ({ news }) => {
             <div className="w-full md:w-48 aspect-[4/5] relative shrink-0">
               {item.picture?.url && (
                 <Image
-                  src={`http://193.188.23.149:1337${item.picture.url}`}
+                  src={`https://russaper.ru${item.picture.url}`}
                   alt={item.title}
                   fill
                   className="object-cover rounded-l-lg"
